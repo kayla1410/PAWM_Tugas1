@@ -1,0 +1,171 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Kontainer dengan ukuran semula */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    background-color: #6c757d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.canvas-container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Kanvas Responsif */
+#simulationCanvas {
+    width: 90%;  /* Sesuaikan lebar kanvas agar lebih kecil */
+    max-width: 400px;
+    height: auto; /* Otomatis menyesuaikan tinggi */
+    aspect-ratio: 5 / 3; /* Tetapkan rasio aspek untuk proporsi */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.controls {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input[type="number"],
+.input-group input[type="range"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input-group input[type="range"] {
+    cursor: pointer;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.results h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.results p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+
+    #simulationCanvas {
+        width: 100%;
+        max-width: 300px; /* Lebih kecil pada layar kecil */
+    }
+}
+
+.draggable {
+    width: 50px;
+    height: 50px;
+    background-color: #FF5733;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border-radius: 8px;
+    cursor: grab;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jungkat-Jungkit Interaktif</title>
+  <link rel="stylesheet" href="style3.css">
+  <script defer src="script3.js"></script>
+</head>
+<body>
+  <div class="outer-container">
+    <!-- Header Section -->
+    <div class="header">Jungkat-Jungkit</div>
+
+    <!-- Main Content Section -->
+    <div class="container">
+      <div class="simulation-area">
+        <div class="drop-zone" id="left-zone"></div>
+
+        <!-- Seesaw with Pivot -->
+        <div class="seesaw-wrapper">
+          <div class="seesaw" id="seesaw"></div>
+          <div class="pivot"></div>
+        </div>
+
+        <div class="drop-zone" id="right-zone"></div>
+      </div>
+
+      <!-- Available Weights Section -->
+      <div class="section-title">Beban</div>
+      <div class="available-weights" id="weight-container">
+        <div class="weight" data-weight="5" draggable="true">5 kg</div>
+        <div class="weight" data-weight="10" draggable="true">10 kg</div>
+        <div class="weight" data-weight="15" draggable="true">15 kg</div>
+      </div>
+
+      <!-- Reset Button -->
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

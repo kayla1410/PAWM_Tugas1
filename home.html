@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Virtual Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Virtual Lab</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Simulator</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <nav class="topbar">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search Simulator">
+                    <button class="search-button">
+                        <img src="https://img.icons8.com/ios-glyphs/30/search--v1.png" alt="Search Icon">
+                    </button>
+                </div>
+                <img src="profile.png" alt="Profile" class="profile-image">
+            </nav>
+
+            <!-- Content -->
+            <section class="content">
+                <h1>Selamat Datang!</h1>
+
+                <!-- Tab Section -->
+                <div class="tab-container">
+                    <ul class="tab-menu">
+                        <li class="tab-item active" onclick="showTab('Simulator')">Simulator</li>
+                    </ul>
+                    
+                    <div class="tab-content" id="active-courses">
+                        <div class="course-card">
+                            <img src="pesawat.png" alt="Math Icon">
+                            <h3>Hukum Newton pada Bidang Miring</h3>
+                            <a href="C:/Users/kayla/OneDrive/Desktop/PPAWM%20Tugas%201/css%202/content.html" class="view-button">Open</a>
+                        </div>
+                        <div class="course-card">
+                            <img src="jungkat.webp" alt="Physics Icon">
+                            <h3>Jungkat Jungkit Sederhana</h3>
+                            <a href="C:/Users/kayla/OneDrive/Desktop/PPAWM%20Tugas%201/css%202/jungkatjungkit.html" class="view-button">Open</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

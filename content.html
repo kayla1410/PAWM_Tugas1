@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hukum Newton pada Bidang Miring</title>
+    <link rel="stylesheet" href="style1.css">
+    <script defer src="script1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">Hukum Newton Pesawat Sederhana</h1>
+            </div>
+            <div class="card-content">
+                <div class="grid">
+                    <div class="canvas-container">
+                        <canvas id="simulationCanvas" width="500" height="300"></canvas>
+                        <div class="button-container">
+                            <button id="startButton">Start</button>
+                            <button id="stopButton">Stop</button>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="input-group">
+                            <label for="mass">Massa (kg)</label>
+                            <input type="number" id="mass" min="0.1" step="0.1" value="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="angle">Sudut (derajat): <span id="angleValue">30</span>°</label>
+                            <input type="range" id="angle" min="1" max="89" step="1" value="30">
+                        </div>
+                        <div class="input-group">
+                            <label for="friction">Koefisien Gesekan: <span id="frictionValue">0.10</span></label>
+                            <input type="range" id="friction" min="0" max="1" step="0.01" value="0.1">
+                        </div>
+                        <div class="input-group">
+                            <label for="baseLength">Panjang Dasar (m)</label>
+                            <input type="number" id="baseLength" min="1" step="0.1" value="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="results">
+                    <h3>Hasil:</h3>
+                    <p>Berat (W): <span id="weightResult">0.00</span> N</p>
+                    <p>Gaya kubus menuruni bidang: <span id="wxResult">0.00</span> N</p>
+                    <p>Komponen Berat sumbu-y (Wy): <span id="wyResult">0.00</span> N</p>
+                    <p>Kecepatan kotak: <span id="velocityResult">0.00</span> m/s</p>
+                    <p>Waktu sampai ke dasar: <span id="timeResult">0.00</span> s</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
